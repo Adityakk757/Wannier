@@ -1,0 +1,49 @@
+num_bands        = 632
+num_wann         = 126
+
+dis_num_iter    = 2000
+num_iter        = 1000
+
+dis_win_min = -30.0 
+dis_win_max = 30.0
+dis_froz_min = -0.5
+dis_froz_max = 0.5
+
+write_hr = .true.
+
+begin atoms_frac
+{Add Atom_frac}
+end atoms_frac
+
+begin kpoint_path
+{K Paths}
+end kpoint_path
+
+wannier_plot = .true.
+
+bands_plot = .true.
+
+!fermi_energy = XXX
+!fermi_surface_plot = true
+
+wannier_plot_format = xcrysden
+restart=plot
+
+guiding_centres = .true.
+
+begin projections
+Fe1:l=2,mr=1
+O:l=1,mr=1,2,3
+end projections
+
+
+begin unit_cell_cart
+ang
+{Cell matrix}
+end unit_cell_cart
+
+mp_grid : X  X  X
+
+begin kpoints
+ {kpts}
+end kpoints
